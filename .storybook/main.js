@@ -19,7 +19,9 @@ module.exports = {
       propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true),
     },
   },
-  webpackOverride: (config) => {
-    return webpackOverride(config);
+  webpackFinal: (config) => {
+    const result = webpackOverride(config);
+    //console.log(JSON.stringify(result.resolve, undefined, 2));
+    return result;
   }
 }

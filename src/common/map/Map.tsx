@@ -1,26 +1,43 @@
-import React, { useCallback, useRef } from "react";
-import { Map, View } from "ol";
-import { Tile } from "ol/layer";
-import { OSM } from "ol/source";
+import React, { useCallback } from "react";
+import {
+  CesiumWidget,
+  SceneMode,
+  BaseLayerPickerViewModel,
+  ProviderViewModel,
+  buildModuleUrl,
+  OpenStreetMapImageryProvider,
+} from "cesium";
+
+import "cesium/Widgets/widgets.css";
+
 type MapCompProps = {
-  default3D?: boolean
+  default3D?: boolean;
 };
 
 export const MapComp = ({ default3D = false }: MapCompProps) => {
-  const map = useRef(
-    new Map({
-      layers: [
-        new Tile({
-          source: new OSM(),
-        }),
-      ],
-      view: new View({
-        center: [0, 0],
-        zoom: 0,
+  const ref = useCallback((element: HTMLDivElement) => {
+    const viewModels = [
+      new ProviderViewModel({
+        name: "OSM",
+        tooltip: "OSM maps",
+        iconUrl: buildModuleUrl(
+          "Widgets/Images/ImageryProviders/openStreetMap.png"
+        ),
+        creationFunction: () => {
+          return new OpenStreetMapImageryProvider({
+            url: "https://a.tile.openstreetmap.org/",
+          });
+        },
       }),
-    })
-  );
-
-  const updateTarget = useCallback((node: HTMLDivElement) => map.current.setTarget(node), []);
-  return <div ref={updateTarget} style={{ height: "100%", width: "100%" }} />;
+    ];
+    const widget = new CesiumWidget(element, {
+      sceneMode: SceneMode.SCENE3D,
+      imageryProvider: false,
+    });
+    const layerPicker = new BaseLayerPickerViewModel({
+      globe: widget.scene.globe,
+      imageryProviderViewModels: viewModels,
+    });
+  }, []);
+  return <div ref={ref} />;
 };
