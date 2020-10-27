@@ -6,7 +6,8 @@ const {
   fixBabelImports,
   override,
   addWebpackAlias,
-  addWebpackPlugin
+  addWebpackPlugin,
+  addBundleVisualizer,
 } = require("customize-cra");
 
 const cesiumSource = "node_modules/cesium/Source";
@@ -44,5 +45,8 @@ module.exports = override(
     new DefinePlugin({
       CESIUM_BASE_URL: JSON.stringify("/static/cesium"),
     })
-  )
+  ),
+  addBundleVisualizer({
+		openAnalyzer: false,
+	})
 );
