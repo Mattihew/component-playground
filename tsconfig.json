@@ -14,8 +14,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
-    "baseUrl": "src/@types",
-    "typeRoots": ["src/@types"]
+    "baseUrl": "src",
+    "typeRoots": ["src/olcs"]
   },
   "include": ["src"]
 }
