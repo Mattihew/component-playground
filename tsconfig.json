@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -14,8 +18,15 @@
     "noEmit": true,
     "jsx": "react",
     "baseUrl": "src",
-    "types": ["jest"],
-    "typeRoots": ["./node_modules/@types", "./node_modules/@jest/types","./src/olcs"]
+    "types": [
+      "jest"
+    ],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/@jest/types",
+      "./src/olcs"
+    ],
+    "isolatedModules": true
   },
   "include": [
     "src"

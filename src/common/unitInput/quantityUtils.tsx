@@ -51,6 +51,7 @@ export const quantityFactory = <
 
       if (newUnit) {
         setUnit(newUnit);
+        onBlur(convert(value ?? 0, newUnit))
       }
     };
     const unitChanged = (key: string) => {
