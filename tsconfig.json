@@ -11,11 +11,13 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
     "baseUrl": "src",
-    "typeRoots": ["src/olcs"]
+    "types": ["jest"],
+    "typeRoots": ["./node_modules/@types", "./node_modules/@jest/types","./src/olcs"]
   },
-  "include": ["src"]
+  "include": [
+    "src"
+  ]
 }

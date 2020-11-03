@@ -10,7 +10,10 @@ type MapCompProps = {
   default3D?: boolean;
 };
 
-window.Cesium = Cesium;
+// required for olcs.
+if (!window.Cesium) {
+  window.Cesium = Cesium;
+}
 
 export const MapComp = ({ default3D = false }: MapCompProps) => {
   const map = useRef(
@@ -25,7 +28,7 @@ export const MapComp = ({ default3D = false }: MapCompProps) => {
           center: [0, 0],
           zoom: 0,
         }),
-      })
+      }),
     })
   );
   const updateTarget = useCallback(
@@ -35,7 +38,7 @@ export const MapComp = ({ default3D = false }: MapCompProps) => {
     [map]
   );
   useEffect(() => {
-    map.current?.setEnabled(default3D);
+    map.current.setEnabled(default3D);
   }, [map, default3D]);
   return <div ref={updateTarget} style={{ height: "100%", width: "100%" }} />;
 };

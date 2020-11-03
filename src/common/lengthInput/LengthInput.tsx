@@ -1,16 +1,10 @@
-import React from "react";
-import { UnitInput } from "../unitInput/UnitInput";
+import { quantityFactory } from "../unitInput/quantityUtils";
 
 const lengths = {
+  ft: 1,
   m: 2,
-  f: 1,
 };
 
-type LengthInputProps = {
-  outputFormat: keyof typeof lengths;
-  defaultFormat: keyof typeof lengths;
-};
+const lengthModule = quantityFactory(lengths);
 
-export const LengthInput = ({outputFormat, defaultFormat}: LengthInputProps) => {
-  return <UnitInput units={lengths} outputFormat={outputFormat} defaultFormat={defaultFormat}/>;
-};
+export const LengthInput = lengthModule.Input;

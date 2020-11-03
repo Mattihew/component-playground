@@ -3,7 +3,6 @@ dependencies:
   '@testing-library/jest-dom': 4.2.4
   '@testing-library/react': 9.5.0_react-dom@16.14.0+react@16.14.0
   '@testing-library/user-event': 7.2.1
-  '@types/jest': 24.9.1
   '@types/node': 12.12.68
   '@types/ol': 6.4.1
   '@types/react': 16.9.53
@@ -27,6 +26,7 @@ devDependencies:
   '@storybook/node-logger': 6.0.27
   '@storybook/preset-create-react-app': 3.1.4_271f00221df2046336b1e29db79a956a
   '@storybook/react': 6.0.27_5b4efab98030016b43cc9ec57058dfd7
+  '@types/jest': 24.9.0
   babel-loader: 8.1.0_c469a5abc93aee6c0316d662800f35a3
   copy-webpack-plugin: 6.2.1_webpack@4.42.0
   react-is: 16.13.1
@@ -2287,7 +2287,6 @@ packages:
       '@types/istanbul-lib-coverage': 2.0.3
       '@types/istanbul-reports': 1.1.2
       '@types/yargs': 13.0.11
-    dev: false
     engines:
       node: '>= 6'
     resolution:
@@ -3563,7 +3562,7 @@ packages:
       integrity: sha512-SEYeGAIQIQX8NN6LDKprLjbrd5dARM5EXsd8GI/A5l0apYI1fGMWgPHSe4ZKL4eozlAyI+doUE9XbYS4xCkQ1w==
   /@types/graceful-fs/4.1.4:
     dependencies:
-      '@types/node': 12.19.1
+      '@types/node': 12.19.3
     dev: true
     resolution:
       integrity: sha512-mWA/4zFQhfvOA8zWkXobwJvBD7vzcxgrOQ0J5CH1votGqdq9m7+FwtGaqyCZqC3NyyBkc9z4m+iry4LlqcMWJg==
@@ -3597,7 +3596,6 @@ packages:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.3
       '@types/istanbul-lib-report': 3.0.0
-    dev: false
     resolution:
       integrity: sha512-P/W9yOX/3oPZSpaYOCQzGqgCQRXn0FFO/V8bWrCQs+wLmvVVxk6CRBXALEvNs9OHIatlnlFokfhuDo2ug01ciw==
   /@types/istanbul-reports/3.0.0:
@@ -3606,12 +3604,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-nwKNbvnwJ2/mndE9ItP/zc2TCzw6uuodnF4EHYWD+gCQDVBuRQL5UzbZD0/ezy1iKsFU2ZQiDqg4M9dN4+wZgA==
-  /@types/jest/24.9.1:
+  /@types/jest/24.9.0:
     dependencies:
       jest-diff: 24.9.0
-    dev: false
+    dev: true
     resolution:
-      integrity: sha512-Fb38HkXSVA4L8fGKEZ6le5bB8r6MRWlOCZbVuWZcmOMSCd2wCYOwN1ibj8daIoV9naq7aaOZjrLCoCMptKU/4Q==
+      integrity: sha512-dXvuABY9nM1xgsXlOtLQXJKdacxZJd7AtvLsKZ/0b57ruMXDKCOXAC/M75GbllQX6o1pcZ5hAG4JzYy7Z/wM2w==
   /@types/json-schema/7.0.6:
     resolution:
       integrity: sha512-3c+yGKvVP5Y9TYBEibGNR+kLtijnj7mYrXRg+WpFb2X9xm04g/DXYkfg4hmzJQosc9snFNUPkbYIhu+KAm6jJw==
@@ -3649,6 +3647,10 @@ packages:
   /@types/node/12.19.1:
     resolution:
       integrity: sha512-/xaVmBBjOGh55WCqumLAHXU9VhjGtmyTGqJzFBXRWZzByOXI5JAJNx9xPVGEsNizrNwcec92fQMj458MWfjN1A==
+  /@types/node/12.19.3:
+    dev: true
+    resolution:
+      integrity: sha512-8Jduo8wvvwDzEVJCOvS/G6sgilOLvvhn1eMmK3TW8/T217O7u1jdrK6ImKLv80tVryaPSVeKu6sjDEiFjd4/eg==
   /@types/npmlog/4.1.2:
     dev: true
     resolution:
@@ -3815,7 +3817,6 @@ packages:
   /@types/yargs/13.0.11:
     dependencies:
       '@types/yargs-parser': 15.0.0
-    dev: false
     resolution:
       integrity: sha512-NRqD6T4gktUrDi1o1wLH3EKC1o2caCr7/wR87ODcbVITQF106OM3sFN92ysZ++wqelOd1CTzatnOBRDYYG6wGQ==
   /@types/yargs/15.0.9:
@@ -4646,10 +4647,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-tG6JCTSpWR8tL2+G1+ap8bP+dqg=
-  /aws4/1.10.1:
+  /aws4/1.11.0:
     dev: false
     resolution:
-      integrity: sha512-zg7Hz2k5lI8kb7U32998pRRFin7zJlkfezGJjUc2heaD4Pw2wObakCDVzkKztTm/Ln7eiVvYsjqak0Ed4LkMDA==
+      integrity: sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==
   /axobject-query/2.2.0:
     dev: false
     resolution:
@@ -6646,7 +6647,6 @@ packages:
     resolution:
       integrity: sha512-E+B1gzkl2gqxt1IhUzwjrxBKRqx1UzC3WLONHinn8S3T6lwV/agVCyitiFOsGJ/eYuEUBvD71MZHy3Pv1G9doQ==
   /diff-sequences/24.9.0:
-    dev: false
     engines:
       node: '>= 6'
     resolution:
@@ -9398,7 +9398,6 @@ packages:
       diff-sequences: 24.9.0
       jest-get-type: 24.9.0
       pretty-format: 24.9.0
-    dev: false
     engines:
       node: '>= 6'
     resolution:
@@ -9460,7 +9459,6 @@ packages:
     resolution:
       integrity: sha512-6d4V2f4nxzIzwendo27Tr0aFm+IXWa0XEUnaH6nU0FMaozxovt+sfRvh4J47wL1OvF83I3SSTu0XK+i4Bqe7uA==
   /jest-get-type/24.9.0:
-    dev: false
     engines:
       node: '>= 6'
     resolution:
@@ -12348,7 +12346,6 @@ packages:
       ansi-regex: 4.1.0
       ansi-styles: 3.2.1
       react-is: 16.13.1
-    dev: false
     engines:
       node: '>= 6'
     resolution:
@@ -13310,7 +13307,7 @@ packages:
   /request/2.88.2:
     dependencies:
       aws-sign2: 0.7.0
-      aws4: 1.10.1
+      aws4: 1.11.0
       caseless: 0.12.0
       combined-stream: 1.0.8
       extend: 3.0.2
@@ -15796,7 +15793,7 @@ specifiers:
   '@testing-library/jest-dom': ^4.2.4
   '@testing-library/react': ^9.5.0
   '@testing-library/user-event': ^7.2.1
-  '@types/jest': ^24.9.1
+  '@types/jest': 24.9.0
   '@types/node': ^12.12.67
   '@types/ol': ^6.4.1
   '@types/react': ^16.9.52

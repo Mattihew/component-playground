@@ -1,5 +1,5 @@
-import React from "react";
-import { Meta } from "@storybook/react/types-6-0";
+import React, { ComponentPropsWithoutRef } from "react";
+import { Meta, Story } from "@storybook/react/types-6-0";
 import { LengthInput } from "./LengthInput";
 
 export default {
@@ -7,6 +7,9 @@ export default {
   component: LengthInput,
 } as Meta;
 
-export const Primary = () => (
-  <LengthInput defaultFormat={"m"} outputFormat={"f"} />
-);
+type StoryType = Story<ComponentPropsWithoutRef<typeof LengthInput>>;
+
+export const Default: StoryType = (args) => <LengthInput {...args} />;
+
+export const WithStartValue: StoryType = (args) => <LengthInput {...args} />;
+WithStartValue.args = { defaultValue: 1000, defaultFormat: "m" };
